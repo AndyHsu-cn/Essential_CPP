@@ -1,0 +1,55 @@
+01  STL组织架构图
+    （1）容器
+            1 顺序容器
+                vector【类似数组】
+                deque【两端插入、删除效率都很高】
+                list【类似双向链表】
+            2 关联容器
+                map
+                set
+    （2）范型算法[75个]
+        实现原理
+            function template —— 实现与操作对象类型的无关性
+            iterator - 实现了与容器的无关性
+
+02  产生顺序容器
+    (1)空容器
+        如list<string> slist; 
+    （2）特定大小，元素值默认的容器
+        如list<int> ilist(10);
+    （3）特定大小，指定值的容器
+        如list<int> ilist(10, -1);
+    （4）通过一对儿iterator产生容器
+        如list<int> ilist(Iterator it1, Iterator it2);
+    （5）复制其他容器
+        如list<int> ilist2(ilist);
+
+03  顺序容器的insert()四种变形
+    （1）iterator insert(iterator pos, elemType value)
+    （2）void insert(iterator pos, int count, elemType value)
+    （3）void insert(iterator1 pos, iterator2 first, iterator2 last)
+    （4）iterator insert(iterator pos)
+
+04  顺序容器的eraser()两种变形
+    (1) iterator eraser(iterator pos)
+    (2) iterator eraser(iterator first, iterator last)
+
+05  function object
+    欲使用function object，需包含头文件#include <functional>
+    首先，它是某个class的实例对象
+    其次，function object可以被当成一般函数使用
+
+    分类
+    （1）算术运算
+        plus<type>, minus<type>, negate<type>, 
+        mulitplies<type>, divides<type>, modules<type>
+    （2）关系运算
+        less<type>, less_equal<type>,
+        greater<type>, greater_equal<type>
+        equal_to<type>, not_equal_to<type>
+    （3）逻辑运算
+        logical_and<type>, logical_or<type>, logical_not<type>
+
+06  set
+    set中的元素具有互异性
+    默认less-than运算符进行排序
