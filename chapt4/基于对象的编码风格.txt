@@ -1,0 +1,27 @@
+01  Constructor
+    构造函数函数名必须与class名称相同
+    构造函数不应指定返回值类型，也不用返回任何值
+    可以被重载
+
+02  Member initialization list
+    紧跟在参数后的冒号后面
+    列表以逗号作为分隔
+    主要用于将参数传递给拥有member object的class
+
+03  const member function
+    保证该member function不会修改class object
+    在声明/定义处添加
+    参数列表和函数体之间添加const
+
+    注意：const member function可以修改添加了mutable的数据成员
+
+04  static data member
+    每个类的成员共享的、唯一的member
+    我们必须在程序文件中提供其清楚的定义，若该member比较简单，则可在类定义的内部同时声明和定义
+
+05  运算符函数
+    不用指定名称
+    在运算符的前面加上关键字operator
+
+06  function object
+    通常function object被当作参数传递给范型算法
